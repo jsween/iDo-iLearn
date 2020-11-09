@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
-// MARK: - PROPERTIES
-
-// MARK: - BODY
 
 struct ContentView: View {
+    // MARK: - PROPERTIES
+    var cards: [Card] = cardData
+    
+    // MARK: - BODY
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(0 ..< 6) { item in
-                    CardView()
+                ForEach(cards) { card in
+                    CardView(card: card)
                 }
             }
             .padding(20)
@@ -27,6 +29,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(cards: cardData)
     }
 }
