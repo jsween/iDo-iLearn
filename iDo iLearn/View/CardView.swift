@@ -11,6 +11,7 @@ struct CardView: View {
     // MARK: - PROPERTIES
     
     var gradient: [Color] = [Color("Color01"), Color("Color02")]
+    let hapticImpact = UIImpactFeedbackGenerator(style: .medium)
     // MARK: - BODY
     
     var body: some View {
@@ -31,6 +32,7 @@ struct CardView: View {
             
             Button(action: {
                 print("Button was pressed")
+                hapticImpact.impactOccurred()
             }) {
                 HStack {
                     Text("Learn".uppercased())
