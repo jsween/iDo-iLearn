@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+// MARK: - PROPERTIES
+
+// MARK: - BODY
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        CardView()
     }
 }
+
+// MARK: - PREVIEW
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
